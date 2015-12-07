@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "1E129789EE5E2A0B8751C723759D3EF021B4512E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "1E129789EE5E2A0B8751C723759D3EF021B4512E" : 0,
+    "57918A933C0B6F55EF68E7629023CB5C363A3B5E" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "7B6F2110-31A9-4539-A0DA-63AB4AFBC5AE",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "1E129789EE5E2A0B8751C723759D3EF021B4512E" : "Example\/",
+    "57918A933C0B6F55EF68E7629023CB5C363A3B5E" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Example",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Example.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/gerhardberger\/nao-swift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1E129789EE5E2A0B8751C723759D3EF021B4512E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/gerhardberger\/nao-swift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "57918A933C0B6F55EF68E7629023CB5C363A3B5E"
+    }
+  ]
+}

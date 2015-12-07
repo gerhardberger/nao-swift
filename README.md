@@ -5,7 +5,7 @@ A *Swift* library to control the [**Nao**](https://www.aldebaran.com/en/humanoid
 ## Example
 
 ``` swift
-let nao = Nao(ipAdress: "192.168.1.12", port: 54010)
+let nao = Nao(ipAdress: "127.0.0.1", port: 3001)
 
 nao.goTo(posture: .Stand, speed: 0.5) { success, result in
     if success {
@@ -16,6 +16,12 @@ nao.goTo(posture: .Stand, speed: 0.5) { success, result in
     }
 }
 ```
+
+## Setup
+1. If you use Choregraphe, create a **Python Script** box and complete its code with the code found in `NaoServer.py`. This will create a Python HTTP server on Nao, that you can connect in iOS.
+2. `nao-swift` depends on **Alamofire** swift module, install it with CocoaPods.
+3. Add the `Nao.swift` file to your project.
+4. Make sure that the server is running on Nao, and then send commands to it!
 
 ## API
 ### Create
@@ -32,20 +38,12 @@ Applies a predefined `posture` with the given `speed`. [Original command](http:/
 ##### `nao.stop()`
 Stops Nao. [Original command](http://doc.aldebaran.com/1-14/naoqi/motion/alrobotposture-api.html#ALRobotPosture::stopMove).
 
-##### `nao.maxTry: Int`
-Sets the maximum number of tries performed by `nao.goTo()` before returning a fail. [Original command](http://doc.aldebaran.com/1-14/naoqi/motion/alrobotposture-api.html#ALRobotPosture::setMaxTryNumber__iCR).
-
 
 ### Navigation
 ##### `nao.moveTo(x: Float, y: Float, theta: Float, callback: (Bool, String?) -> ())`
 Makes Nao move to the given position `x`, `y` with the rotation `theta` (*in radians*) in the ground plane, relative to `FRAME_ROBOT`. [Original command](http://doc.aldebaran.com/1-14/naoqi/motion/alnavigation-api.html#ALNavigationProxy::moveTo__floatCR.floatCR.floatCR).
 
-##### `nao.securityDistance: Float`
-Defines the security area in which any object detection stops the robot. Default: 0.4m. [Original command](http://doc.aldebaran.com/1-14/naoqi/motion/alnavigation-api.html#ALNavigationProxy::setSecurityDistance__floatCR).
 
 ### Text to speech
 ##### `nao.say(s: String, callback: (Bool, String?) -> ())`
 Says the specified `s` string of characters. [Original command](http://doc.aldebaran.com/1-14/naoqi/audio/altexttospeech-api.html#ALTextToSpeechProxy::say__ssCR).
-
-##### `nao.language: String`
-Sets the language currently used by the text to speech system. Default: English. [Original command](http://doc.aldebaran.com/1-14/naoqi/audio/altexttospeech-api.html#ALTextToSpeechProxy::setLanguage__ssCR).
