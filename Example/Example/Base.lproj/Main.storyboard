@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,12 +17,319 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2r1-7Y-Baa" customClass="RemoteButton" customModule="Example" customModuleProvider="target">
+                                <rect key="frame" x="20" y="30" width="275" height="70"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.72156862749999995" green="0.61568627450000002" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="226" id="dN6-PQ-9vH"/>
+                                    <constraint firstAttribute="height" constant="76" id="ojh-Mg-zcp"/>
+                                    <constraint firstAttribute="height" constant="70" id="vpk-EO-Gef"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" title="SIT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="dN6-PQ-9vH"/>
+                                        <exclude reference="ojh-Mg-zcp"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="sitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Goq-2u-s50"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2T6-MW-Iky" customClass="RemoteButton" customModule="Example" customModuleProvider="target">
+                                <rect key="frame" x="20" y="110" width="275" height="70"/>
+                                <animations/>
+                                <color key="backgroundColor" cyan="0.20000000000000001" magenta="0.28000000000000003" yellow="0.38" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="QLu-b5-VPV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" title="STAND">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="standPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KwE-7T-LiZ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type something" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="ynK-Vc-YKJ">
+                                <rect key="frame" x="20" y="350" width="560" height="70"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Isq-My-wc2"/>
+                                    <constraint firstAttribute="height" constant="70" id="oxy-vc-gNR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="send"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Isq-My-wc2"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBO-Hq-lFH" customClass="RemoteButton" customModule="Example" customModuleProvider="target">
+                                <rect key="frame" x="20" y="430" width="560" height="70"/>
+                                <animations/>
+                                <color key="backgroundColor" cyan="0.20000000000000001" magenta="0.28000000000000003" yellow="0.38" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="BVe-0B-lHY"/>
+                                    <constraint firstAttribute="height" constant="70" id="bBY-Fy-gw3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" title="STOP">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="BVe-0B-lHY"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="sayPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ar1-Ye-aRu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfz-9Z-Q0c" customClass="RemoteButton" customModule="Example" customModuleProvider="target">
+                                <rect key="frame" x="305" y="30" width="275" height="70"/>
+                                <animations/>
+                                <color key="backgroundColor" cyan="0.20000000000000001" magenta="0.28000000000000003" yellow="0.38" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="2i5-Uv-MdA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" title="STAND INIT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="standInitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Fc-3K-bps"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sb-rP-V9G" customClass="RemoteButton" customModule="Example" customModuleProvider="target">
+                                <rect key="frame" x="305" y="110" width="275" height="70"/>
+                                <animations/>
+                                <color key="backgroundColor" cyan="0.20000000000000001" magenta="0.28000000000000003" yellow="0.38" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Q7K-H7-puv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" title="STAND ZERO">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="standZeroPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UEE-qR-lA2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sFV-ob-nsW" customClass="RemoteButton" customModule="Example" customModuleProvider="target">
+                                <rect key="frame" x="20" y="190" width="275" height="70"/>
+                                <animations/>
+                                <color key="backgroundColor" cyan="0.20000000000000001" magenta="0.28000000000000003" yellow="0.38" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="CNx-wR-Df8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" title="CROUCH">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="crouchPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S3h-9z-zRe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79q-WZ-WIT" customClass="RemoteButton" customModule="Example" customModuleProvider="target">
+                                <rect key="frame" x="305" y="190" width="275" height="70"/>
+                                <animations/>
+                                <color key="backgroundColor" cyan="0.20000000000000001" magenta="0.28000000000000003" yellow="0.38" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="0wT-RW-xuP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" title="SIT RELAX">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sitRelaxPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4y4-Dg-BAr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufb-lC-I3m" customClass="RemoteButton" customModule="Example" customModuleProvider="target">
+                                <rect key="frame" x="20" y="270" width="275" height="70"/>
+                                <animations/>
+                                <color key="backgroundColor" cyan="0.20000000000000001" magenta="0.28000000000000003" yellow="0.38" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Joh-tv-LLw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" title="LYING BELLY">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="lyingBellyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4w7-rA-3m3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86a-f2-6ec" customClass="RemoteButton" customModule="Example" customModuleProvider="target">
+                                <rect key="frame" x="305" y="270" width="275" height="70"/>
+                                <animations/>
+                                <color key="backgroundColor" cyan="0.20000000000000001" magenta="0.28000000000000003" yellow="0.38" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="SyA-Pf-b3n"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" title="LYING BACK">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="lyingBackPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qzd-T4-4V9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSE-zs-E98" customClass="RemoteButton" customModule="Example" customModuleProvider="target">
+                                <rect key="frame" x="448" y="510" width="132" height="80"/>
+                                <animations/>
+                                <color key="backgroundColor" cyan="0.20000000000000001" magenta="0.28000000000000003" yellow="0.38" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="→">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="rightPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EQH-rb-vmU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ob6-pb-M1A" customClass="RemoteButton" customModule="Example" customModuleProvider="target">
+                                <rect key="frame" x="21" y="510" width="132" height="80"/>
+                                <animations/>
+                                <color key="backgroundColor" cyan="0.20000000000000001" magenta="0.28000000000000003" yellow="0.38" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="←">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VTg-pi-f55"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wN2-IF-sMj" customClass="RemoteButton" customModule="Example" customModuleProvider="target">
+                                <rect key="frame" x="306" y="510" width="132" height="80"/>
+                                <animations/>
+                                <color key="backgroundColor" cyan="0.20000000000000001" magenta="0.28000000000000003" yellow="0.38" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="↓">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="downPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kbc-i0-yNi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uic-v4-1jQ" customClass="RemoteButton" customModule="Example" customModuleProvider="target">
+                                <rect key="frame" x="163" y="510" width="133" height="80"/>
+                                <animations/>
+                                <color key="backgroundColor" cyan="0.20000000000000001" magenta="0.28000000000000003" yellow="0.38" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="↑">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="upPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wmb-Vd-9Xq"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cyan="0.070000000000000007" magenta="0.16" yellow="0.23000000000000001" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DBO-Hq-lFH" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="1qU-qB-fVU"/>
+                            <constraint firstItem="0sb-rP-V9G" firstAttribute="top" secondItem="dfz-9Z-Q0c" secondAttribute="bottom" constant="10" id="1wN-ys-PkC"/>
+                            <constraint firstItem="2T6-MW-Iky" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="2Gf-hL-T4i"/>
+                            <constraint firstItem="2r1-7Y-Baa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="3is-PY-XOT"/>
+                            <constraint firstItem="OSE-zs-E98" firstAttribute="leading" secondItem="wN2-IF-sMj" secondAttribute="trailing" constant="10" id="5I0-d6-DuG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ynK-Vc-YKJ" secondAttribute="trailing" id="5a9-05-2bZ"/>
+                            <constraint firstItem="86a-f2-6ec" firstAttribute="leading" secondItem="ufb-lC-I3m" secondAttribute="trailing" constant="10" id="6pc-30-54R"/>
+                            <constraint firstItem="79q-WZ-WIT" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="7BA-HY-yNn"/>
+                            <constraint firstItem="dfz-9Z-Q0c" firstAttribute="width" secondItem="2r1-7Y-Baa" secondAttribute="width" id="89k-4D-0os"/>
+                            <constraint firstItem="ynK-Vc-YKJ" firstAttribute="top" secondItem="86a-f2-6ec" secondAttribute="bottom" constant="10" id="8gy-bX-qHQ"/>
+                            <constraint firstItem="dfz-9Z-Q0c" firstAttribute="leading" secondItem="2r1-7Y-Baa" secondAttribute="trailing" constant="10" id="8rK-9j-kZP"/>
+                            <constraint firstItem="OSE-zs-E98" firstAttribute="leading" secondItem="wN2-IF-sMj" secondAttribute="trailing" constant="10" id="9Tn-43-dh0"/>
+                            <constraint firstItem="79q-WZ-WIT" firstAttribute="leading" secondItem="sFV-ob-nsW" secondAttribute="trailing" constant="10" id="9XX-ix-K7L"/>
+                            <constraint firstItem="86a-f2-6ec" firstAttribute="width" secondItem="ufb-lC-I3m" secondAttribute="width" id="Ah8-4d-9VE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2T6-MW-Iky" secondAttribute="bottom" constant="260" id="BGu-qZ-kTF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OSE-zs-E98" secondAttribute="bottom" constant="10" id="BbU-qa-KtM"/>
+                            <constraint firstItem="DBO-Hq-lFH" firstAttribute="top" secondItem="ynK-Vc-YKJ" secondAttribute="bottom" constant="10" id="Cok-Jc-hIL"/>
+                            <constraint firstItem="ufb-lC-I3m" firstAttribute="top" secondItem="sFV-ob-nsW" secondAttribute="bottom" constant="10" id="ETc-7a-8nK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="86a-f2-6ec" secondAttribute="trailing" id="Efo-Db-2ki"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0sb-rP-V9G" secondAttribute="trailing" id="Emb-30-LuW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2r1-7Y-Baa" secondAttribute="trailing" id="H1a-xT-7BS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wN2-IF-sMj" secondAttribute="bottom" constant="10" id="Hhb-9E-McK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dfz-9Z-Q0c" secondAttribute="trailing" id="J8D-IK-xdb"/>
+                            <constraint firstItem="OSE-zs-E98" firstAttribute="width" secondItem="ob6-pb-M1A" secondAttribute="width" id="JG8-9H-C8y"/>
+                            <constraint firstItem="79q-WZ-WIT" firstAttribute="leading" secondItem="sFV-ob-nsW" secondAttribute="trailing" constant="10" id="JXE-li-mdP"/>
+                            <constraint firstItem="0sb-rP-V9G" firstAttribute="width" secondItem="2T6-MW-Iky" secondAttribute="width" id="KFf-g3-By2"/>
+                            <constraint firstItem="0sb-rP-V9G" firstAttribute="leading" secondItem="2T6-MW-Iky" secondAttribute="trailing" constant="10" id="MKf-9U-PWx"/>
+                            <constraint firstItem="Uic-v4-1jQ" firstAttribute="top" secondItem="DBO-Hq-lFH" secondAttribute="bottom" constant="10" id="MON-sD-SbP"/>
+                            <constraint firstItem="dfz-9Z-Q0c" firstAttribute="leading" secondItem="2r1-7Y-Baa" secondAttribute="trailing" id="NAt-9I-uxN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OSE-zs-E98" secondAttribute="trailing" id="Nea-rh-1Nf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ob6-pb-M1A" secondAttribute="bottom" constant="10" id="OB5-we-shT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dfz-9Z-Q0c" secondAttribute="trailing" id="S7N-oH-ZqW"/>
+                            <constraint firstItem="2T6-MW-Iky" firstAttribute="trailing" secondItem="2r1-7Y-Baa" secondAttribute="trailing" id="SQp-1R-UWy"/>
+                            <constraint firstItem="ufb-lC-I3m" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="UGm-KJ-Rwn"/>
+                            <constraint firstItem="79q-WZ-WIT" firstAttribute="top" secondItem="0sb-rP-V9G" secondAttribute="bottom" constant="10" id="VZx-KY-ybR"/>
+                            <constraint firstItem="79q-WZ-WIT" firstAttribute="width" secondItem="sFV-ob-nsW" secondAttribute="width" id="Veg-6D-RCD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2T6-MW-Iky" secondAttribute="trailing" id="WlC-Ld-TBz"/>
+                            <constraint firstItem="Uic-v4-1jQ" firstAttribute="width" secondItem="ob6-pb-M1A" secondAttribute="width" id="XdE-kH-8eE"/>
+                            <constraint firstItem="DBO-Hq-lFH" firstAttribute="top" secondItem="ynK-Vc-YKJ" secondAttribute="bottom" constant="20" id="Y0v-xY-o8r"/>
+                            <constraint firstItem="dfz-9Z-Q0c" firstAttribute="leading" secondItem="2r1-7Y-Baa" secondAttribute="trailing" id="YXo-xT-QFv"/>
+                            <constraint firstItem="2r1-7Y-Baa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Yae-Uz-4b4"/>
+                            <constraint firstItem="sFV-ob-nsW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Zrx-Kq-d9v"/>
+                            <constraint firstItem="2T6-MW-Iky" firstAttribute="leading" secondItem="2r1-7Y-Baa" secondAttribute="leading" id="aKr-6P-Ih9"/>
+                            <constraint firstItem="ob6-pb-M1A" firstAttribute="top" secondItem="DBO-Hq-lFH" secondAttribute="bottom" constant="10" id="ana-ze-tPi"/>
+                            <constraint firstItem="86a-f2-6ec" firstAttribute="top" secondItem="79q-WZ-WIT" secondAttribute="bottom" constant="10" id="ceu-hd-rhw"/>
+                            <constraint firstItem="ynK-Vc-YKJ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="1" id="eEQ-oW-4y0"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Uic-v4-1jQ" secondAttribute="bottom" constant="10" id="eIy-29-5gJ"/>
+                            <constraint firstItem="OSE-zs-E98" firstAttribute="top" secondItem="DBO-Hq-lFH" secondAttribute="bottom" constant="10" id="gDj-gC-jH5"/>
+                            <constraint firstItem="0sb-rP-V9G" firstAttribute="leading" secondItem="2T6-MW-Iky" secondAttribute="trailing" constant="10" id="h0l-FC-OoW"/>
+                            <constraint firstItem="wN2-IF-sMj" firstAttribute="leading" secondItem="Uic-v4-1jQ" secondAttribute="trailing" constant="10" id="hp3-1d-a4h"/>
+                            <constraint firstItem="wN2-IF-sMj" firstAttribute="top" secondItem="DBO-Hq-lFH" secondAttribute="bottom" constant="10" id="jbN-s7-H1f"/>
+                            <constraint firstItem="ynK-Vc-YKJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="1" id="mn1-Wo-Paw"/>
+                            <constraint firstItem="ynK-Vc-YKJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="n6t-Ke-eVZ"/>
+                            <constraint firstItem="DBO-Hq-lFH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="odw-9g-Xdg"/>
+                            <constraint firstItem="wN2-IF-sMj" firstAttribute="leading" secondItem="Uic-v4-1jQ" secondAttribute="trailing" constant="10" id="pDj-xv-xur"/>
+                            <constraint firstItem="2T6-MW-Iky" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pp8-Nb-HQh"/>
+                            <constraint firstItem="dfz-9Z-Q0c" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="rhG-ZK-ghM"/>
+                            <constraint firstItem="2r1-7Y-Baa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s1U-hj-HG4"/>
+                            <constraint firstItem="2r1-7Y-Baa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="sWI-zZ-o9T"/>
+                            <constraint firstItem="ob6-pb-M1A" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="1" id="sad-VE-MGB"/>
+                            <constraint firstItem="dfz-9Z-Q0c" firstAttribute="width" secondItem="2r1-7Y-Baa" secondAttribute="width" id="swc-dY-hHo"/>
+                            <constraint firstItem="sFV-ob-nsW" firstAttribute="top" secondItem="2T6-MW-Iky" secondAttribute="bottom" constant="10" id="tPA-ZE-rHl"/>
+                            <constraint firstItem="wN2-IF-sMj" firstAttribute="width" secondItem="ob6-pb-M1A" secondAttribute="width" id="u4S-PM-1Zv"/>
+                            <constraint firstItem="Uic-v4-1jQ" firstAttribute="leading" secondItem="ob6-pb-M1A" secondAttribute="trailing" constant="10" id="ufu-6y-hwX"/>
+                            <constraint firstItem="2T6-MW-Iky" firstAttribute="top" secondItem="2r1-7Y-Baa" secondAttribute="bottom" constant="10" id="wBq-IP-87v"/>
+                            <constraint firstItem="Uic-v4-1jQ" firstAttribute="leading" secondItem="ob6-pb-M1A" secondAttribute="trailing" constant="10" id="xqY-RR-kIH"/>
+                            <constraint firstItem="86a-f2-6ec" firstAttribute="leading" secondItem="ufb-lC-I3m" secondAttribute="trailing" constant="10" id="xv1-EG-sKI"/>
+                            <constraint firstItem="dfz-9Z-Q0c" firstAttribute="leading" secondItem="2r1-7Y-Baa" secondAttribute="trailing" constant="10" id="z6k-FP-T1N"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="H1a-xT-7BS"/>
+                                <exclude reference="Yae-Uz-4b4"/>
+                                <exclude reference="s1U-hj-HG4"/>
+                                <exclude reference="SQp-1R-UWy"/>
+                                <exclude reference="WlC-Ld-TBz"/>
+                                <exclude reference="aKr-6P-Ih9"/>
+                                <exclude reference="pp8-Nb-HQh"/>
+                                <exclude reference="NAt-9I-uxN"/>
+                                <exclude reference="S7N-oH-ZqW"/>
+                                <exclude reference="YXo-xT-QFv"/>
+                                <exclude reference="swc-dY-hHo"/>
+                                <exclude reference="eEQ-oW-4y0"/>
+                                <exclude reference="mn1-Wo-Paw"/>
+                                <exclude reference="Y0v-xY-o8r"/>
+                                <exclude reference="BGu-qZ-kTF"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="sayText" destination="ynK-Vc-YKJ" id="uuC-ef-54C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="84" y="401"/>
         </scene>
     </scenes>
 </document>

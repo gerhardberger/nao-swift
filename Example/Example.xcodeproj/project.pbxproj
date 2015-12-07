@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A321917A1C163AF5008988FD /* RemoteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32191791C163AF5008988FD /* RemoteButton.swift */; };
 		A33638851C14C34C00173EA6 /* Nao.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33638841C14C34C00173EA6 /* Nao.swift */; };
 		A3416C081C14C1F300FB7C70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3416C071C14C1F300FB7C70 /* AppDelegate.swift */; };
 		A3416C0A1C14C1F300FB7C70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3416C091C14C1F300FB7C70 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		3B1FA33891E9F30C582AB01A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A321916E1C14FAA5008988FD /* Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		A32191791C163AF5008988FD /* RemoteButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteButton.swift; sourceTree = "<group>"; };
 		A33638841C14C34C00173EA6 /* Nao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Nao.swift; path = ../../Nao.swift; sourceTree = "<group>"; };
 		A3416C041C14C1F300FB7C70 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3416C071C14C1F300FB7C70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +76,8 @@
 			children = (
 				A33638841C14C34C00173EA6 /* Nao.swift */,
 				A3416C091C14C1F300FB7C70 /* ViewController.swift */,
+				A3416C0B1C14C1F400FB7C70 /* Main.storyboard */,
+				A32191791C163AF5008988FD /* RemoteButton.swift */,
 				A3416C191C14C1FD00FB7C70 /* Other */,
 				A321916E1C14FAA5008988FD /* Example-Bridging-Header.h */,
 			);
@@ -84,7 +88,6 @@
 			isa = PBXGroup;
 			children = (
 				A3416C071C14C1F300FB7C70 /* AppDelegate.swift */,
-				A3416C0B1C14C1F400FB7C70 /* Main.storyboard */,
 				A3416C0E1C14C1F400FB7C70 /* Assets.xcassets */,
 				A3416C101C14C1F400FB7C70 /* LaunchScreen.storyboard */,
 				A3416C131C14C1F400FB7C70 /* Info.plist */,
@@ -224,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3416C0A1C14C1F300FB7C70 /* ViewController.swift in Sources */,
+				A321917A1C163AF5008988FD /* RemoteButton.swift in Sources */,
 				A3416C081C14C1F300FB7C70 /* AppDelegate.swift in Sources */,
 				A33638851C14C34C00173EA6 /* Nao.swift in Sources */,
 			);
