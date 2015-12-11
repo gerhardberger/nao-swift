@@ -39,6 +39,14 @@ Applies a predefined `posture` with the given `speed`. [Original command](http:/
 Stops Nao. [Original command](http://doc.aldebaran.com/1-14/naoqi/motion/alrobotposture-api.html#ALRobotPosture::stopMove).
 
 
+### Motion API
+##### `nao.wake()`
+Wakes up Nao. [Original command](http://doc.aldebaran.com/1-14/naoqi/motion/control-stiffness-api.html#ALMotionProxy::wakeUp).
+
+##### `nao.rest()`
+Rests Nao. [Original command](http://doc.aldebaran.com/1-14/naoqi/motion/control-stiffness-api.html#ALMotionProxy::rest).
+
+
 ### Navigation
 ##### `nao.moveTo(x: Float, y: Float, theta: Float, callback: (Bool, String?) -> ())`
 Makes Nao move to the given position `x`, `y` with the rotation `theta` (*in radians*) in the ground plane, relative to `FRAME_ROBOT`. [Original command](http://doc.aldebaran.com/1-14/naoqi/motion/alnavigation-api.html#ALNavigationProxy::moveTo__floatCR.floatCR.floatCR).

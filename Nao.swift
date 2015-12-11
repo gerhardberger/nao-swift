@@ -92,6 +92,18 @@ class Nao {
         send([ "moveTo": "true", "x": x.description, "y": y.description, "t": theta.description ], callback: cb)
     }
     
+
+    // MOTION API
+    
+    // Wake motors up
+    func wake (completion cb: (Bool, String?) -> ()) {
+        send([ "wake": "true" ], callback: cb)
+    }
+    
+    // Sets motors off
+    func rest (completion cb: (Bool, String?) -> ()) {
+        send([ "rest": "true" ], callback: cb)
+    }
     
     // TEXTTOSPEECH API
     
